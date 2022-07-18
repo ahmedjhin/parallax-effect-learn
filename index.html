@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/e6ecdd5a08.js" crossorigin="anonymous"></script>
+    <script src="config.js" defer ></script>
+    <title>MoonLight</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo </a>
+      <ul>
+        <!-- <li><a href="#" class="active">Home</a></li>
+        <li><a href="#" >About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li> -->
+        <ul>
+          <li id="ggb" style="--i:#a955ff; --j:#ea51ff;"> 
+            <span class="icon"><i class="fa-solid fa-house"></i></span>
+            <span class="title">Home</span>
+          </li>
+          <li style="--i:#56ccf2; --j:#2f80ed;"> 
+            <span class="icon"><i class="fa-solid fa-video"></i></span>
+            <span class="title">Video</span>
+          </li>
+          <li style="--i:#ff9966; --j:#ff5e62;"> 
+            <span class="icon"><i class="fa-solid fa-camera"></i></span>
+            <span class="title">Photo</span>
+          </li>
+          <li style="--i:#80ff72; --j:#7ee8fa;"> 
+            <span class="icon"><i class="fa-regular fa-comment"></i></span>
+            <span class="title">Massage</span>
+          </li>
+          <li style="--i:#ffa9c6; --j:#f434e2;"> 
+              <span class="icon"><i class="fa-solid fa-heart"></i></span>
+              <span class="title">Favoret</span>
+            </li>
+        </ul>
+      </ul>
+      
+    </header>
+    <section>
+      <img src="/imgs/stars.png" id="stars" />
+      <img src="/imgs/moon.png" id="moon" />
+      <img src="/imgs/mountains_behind.png" id="mountains-behind" />
+      <h2 id="text">Moon Light</h2>
+      <a href="#sec" id="btn">Explore</a>
+      <img src="/imgs/mountains_front.png" id="mountains-front" />
+    </section>
+    <div class="sec" id="sec">
+      <h2>Parallax Scrolling effects</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex repudiandae
+        maxime, accusamus non quaerat debitis aperiam nisi odit enim nihil
+        magnam quam culpa ad pariatur reprehenderit quo vero, officia
+        perferendis! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quod ex fugiat, error tenetur similique sit incidunt facilis aperiam
+        <br></br> deserunt ducimus eligendi mollitia unde nesciunt enim. Eaque numquam
+        perspiciatis sit Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Expedita, repellat. Iusto esse expedita, nihil est, ipsa et
+        adipisci nemo minima placeat in inventore nostrum corrupti ipsum,
+        laborum atque debitis iure.
+      </p>
+    </div>
+<script>
+    let stars = document.getElementById('stars') 
+    let moon = document.getElementById('moon') 
+    let btn = document.getElementById('btn') 
+    let text = document.getElementById('text') 
+    let mountBack = document.getElementById('mountains-behind') 
+    let mountFront = document.getElementById('mountains-front') 
+
+
+    window.addEventListener('scroll',function(){
+    let value = window.scrollY;
+    stars.style.left = value * 0.25 + 'px';
+    moon.style.top = value * 1.05 + 'px'; 
+    mountBack.style.top = value * 0.5 + 'px';
+    text.style.marginRight = value * 3 + 'px';
+    text.style.marginTop = value * 1.5 + 'px';
+    btn.style.marginTop = value * 1.5 + 'px';
+})
+</script>
+   
+  </body>
+</html>
