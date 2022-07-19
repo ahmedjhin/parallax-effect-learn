@@ -17,10 +17,12 @@ header {
   left: 0;
   width: 100%;
   padding: 30px 100px;
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
   z-index: 10000;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-columns: 2fr 2fr;
 }
 header .logo {
   color: #fff;
@@ -123,12 +125,12 @@ section img#mountains-front {
 }
 
 /* new buttons */
-ul {
+.ull {
   position: relative;
   display: flex;
   gap: 25px;
 }
-ul li {
+.lii {
   list-style: none;
   position: relative;
   width: 60px;
@@ -142,11 +144,11 @@ ul li {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
 }
-ul li:hover {
+.lii:hover {
   width: 180px;
   box-shadow: 0 10px 25px rgba(0, 0, 0);
 }
-ul li::before {
+.lii::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -155,10 +157,10 @@ ul li::before {
   opacity: 0;
   transition: 0.5s;
 }
-ul li:hover::before {
+.lii:hover::before {
   opacity: 1;
 }
-ul li::after {
+.lii::after {
   content: "";
   position: absolute;
   top: 10px;
@@ -171,30 +173,44 @@ ul li::after {
   z-index: -1;
   opacity: 0;
 }
-ul li:hover::after {
+.lii:hover::after {
   opacity: 0.5;
 }
-ul li i{
+.lii i {
   color: #777;
   font-size: 1.75em;
   transition: 0.5s;
 }
-ul li:hover i{
+.lii:hover i {
   transform: scale(0);
   color: #fff;
   transition-delay: 0s;
 }
-ul li span {
+.lii span {
   position: absolute;
 }
-ul li .title{
+.title {
   color: rgb(255, 255, 255);
   font-size: 1.25;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   transform: scale(0);
 }
-ul li:hover .title{
+.lii:hover .title {
   transform: scale(1);
   transition-delay: 0.25s;
+}
+
+.naver {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+
+.hader-container {
+ height: 10px;
+ 
+ grid-column: 2;
+ grid-row: 2 / -4;
+ 
 }
